@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.android.imran.musicplayer.Player"
+    tools:showIn="@layout/activity_player"
+    >
+
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:foregroundGravity="center"
+        android:indeterminate="false"/>
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="|&lt;"
+        android:id="@+id/btnPrev"
+
+        android:foregroundGravity="center"
+        android:layout_below="@+id/seekBar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="&lt;&lt;"
+        android:id="@+id/btnFW"
+        android:foregroundGravity="center"
+        android:layout_below="@+id/seekBar"
+        android:layout_toRightOf="@+id/btnPrev"
+        android:layout_toEndOf="@+id/btnPrev"/>
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="||"
+        android:id="@+id/btnPlay"
+        android:foregroundGravity="center"
+        android:layout_alignTop="@+id/btnFW"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text=">>"
+        android:id="@+id/btnFF"
+        android:foregroundGravity="center"
+        android:layout_below="@+id/seekBar"
+        android:layout_toLeftOf="@+id/btnNext"
+        android:layout_toStartOf="@+id/btnNext"/>
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text=">|"
+        android:id="@+id/btnNext"
+        android:foregroundGravity="center"
+        android:layout_below="@+id/seekBar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>
